@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        input:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-800 flex flex-col w-full text-white h-[100vh]">
+    <h1 class="text-xl font-bold text-center my-10">Cek Khodam</h1>
+    <label for="input" class="font-mono text-lg">Masukkan Nama :</label>
+    <input type="text" placeholder="Your Name" name="actinput" id="input" class="text-slate-600 rounded focus:outline-none focus:ring-2 focus:ring-slate-200 mx-2 focus:border-transparent font-sans text-black">
+    <h1 class="text-center font-mono text-2x1"><h2 id="namamu"></h2>Khodam mu adalah : </h1>
+    <p id="hasil" class="text-center font-bold text-lg text-orange-300"></p>
+    <button type="button" onclick="e()" class="font-sans text-sm font-bold hover:bg-slate-500 mx-auto my-5 rounded-xl text-black w-[80%] bg-slate-400 transition-all duration-[0.8s]">Cek🚀</button>
+    <script>
+        const button = document.querySelector("button");
+        function e(){
+            let namamu = document.querySelector("#namamu");
+            let input = document.querySelector("#input").value;
+
+            if(input === ""){
+                hasil.textContent = "Masukkan Nama !";
+            }
+
+            else{
+        const hasil = document.querySelector("#hasil");
+        let khodam = [
+            "Kucing Oyen",
+            "Kak Ros",
+            "Opah",
+            "Spongebob",
+            "Patrick",
+            "Tuan Krab",
+            "Boboboi"
+        ];
+
+        let random = khodam[Math.floor(Math.random() * khodam.length)];
+        hasil.textContent = random
+            };
+        };
+    </script>
+</body>
+</html>
